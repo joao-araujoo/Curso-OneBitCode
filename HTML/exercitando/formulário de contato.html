@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <section>
+        <form action="">
+            <fieldset>
+                <legend>Entre em contato</legend>
+                <br>
+                <label for="assunto"><strong>Assunto:</strong></label>
+                <select id="assunto">
+                    <option>Suporte</option>
+                    <option>Sugestão</option>
+                    <option>Reclamação</option>
+                </select>
+                <br><br>
+                <label for="nome"><strong>Nome completo:</strong></label><br>
+                <input type="text" name="nome" id="nome" required placeholder="Seu nome">
+                <br><br>
+                <label for="email"><strong>E-mail:</strong></label><br>
+                <input type="email" name="email" id="email" required placeholder="email@seudominio.com"><br><br>
+                <label for="mensagem"><strong>Mensagem:</strong></label><br>
+                <textarea id="mensagem" cols="30" rows="10"></textarea><br><br>
+                <input type="checkbox" name="check" id="check">
+                <label for="check">Aceito receber novidades por e-mail</label><br><br>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
