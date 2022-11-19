@@ -1,0 +1,14 @@
+body {
+    /*background-color: grey;:*/
+    background-image: url("https://www.spacex.com/static/images/backgrounds-2022/intelsat-g-31-g-32/post-launch/Homepage_Desktop.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: blueviolet;
+    /*border-color: yellow;
+    border-width: 2px;
+    border-style: dotted;*/
+    border: 2px solid yellow;
+}
