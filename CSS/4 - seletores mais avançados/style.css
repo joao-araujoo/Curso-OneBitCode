@@ -1,0 +1,20 @@
+/* * {
+    border: 2px solid;
+}
+*/
+
+li > a {
+    color: red;
+}
+
+h1 + h3 {
+    border: 4px dashed black;
+}
+
+a[href='#']{
+    border: 1px solid orange;
+}
+
+li:nth-of-type(odd){
+    color: purple;
+}
