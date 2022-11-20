@@ -55,6 +55,17 @@ header p {
     color: #3f4142;
 }
 
+@media (min-width: 426px) and (max-width: 880px) {
+    .nodejs {
+       position: absolute;
+       bottom: -45px;
+    }
+
+    .tecnologias-container {
+        margin-left: 160px;
+    }
+}
+
 @media (max-width: 425px) {
 
     header h1 {
