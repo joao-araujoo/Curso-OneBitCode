@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a0743e;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.tecnologias-container {
+    width: 90%;
+    font-size: 15px;
+    margin: 0px auto 30px auto;
+}
+
+.html, .css, .javascript, .react, .nodejs, .sql {
+    width: 30%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 3%;
+}
+
+.html h2 {
+    color: #ff4500;
+}
+
+.css h2 {
+    color: #0b6ea7;
+}
+
+.javascript h2 {
+    color: #ffe600;
+}
+
+.react h2 {
+    color: #00ccff;
+}
+
+.nodejs h2 {
+    color: #73ff00;
+}
+
+.sql h2 {
+    color: #3f4142;
+}
+
+@media (max-width: 425px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+    
+    header p {
+        font-size: 15px;
+    }
+
+    .tecnologias-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .html, .css, .javascript, .react, .nodejs, .sql {
+        font-size: 13px;
+        display: block;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+}
