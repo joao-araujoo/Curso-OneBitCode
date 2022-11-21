@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #a0743e;
+    background-color: #BB9457;
 }
 
 header {
@@ -48,6 +48,9 @@ div .tecnologias {
 
 .html, .css, .javascript, .react, .nodejs, .sql {
     width: 30%;
+    background-color: #FFE6A7;
+    padding: 10px 15px;
+    border-radius: 15px;
 }
 
 .html h2 {
@@ -59,7 +62,7 @@ div .tecnologias {
 }
 
 .javascript h2 {
-    color: #ffe600;
+    color: #d1bd08;
 }
 
 .react h2 {
