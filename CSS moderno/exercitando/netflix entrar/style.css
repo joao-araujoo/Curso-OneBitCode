@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(NetflixSans-Light.otf);
+    font-family: 'NetflixSans-Light';    
+} 
+
+/* background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent); */
+
+body {
+    background-color: #141414;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.profiles {
+    display: flex;
+    gap: 27px;
+    text-align: center;
+}
+
+.title {
+    font-size: 45px;
+    font-family: 'NetflixSans-Light';
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.user, .new-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.user img, .new-user img {
+    width: 135px;
+    height: 135px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.user p, .new-user p {
+    font-family: 'NetflixSans-Light';
+    color: #808080;
+    font-size: 17px;
+    margin-top: 5px;
+    cursor: pointer;
+    border: none !important;
+}
+
+.user p:hover, .user img:hover {
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+ .new-user img:hover {
+    background-color: rgb(212, 212, 212);
+ }
+
+.new-user p:hover {
+    color: #fff;
+}
+
+.my-profiles {
+    width: 170px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.my-profiles:hover {
+    border-color: #fff;
+    color: #fff;
+}
