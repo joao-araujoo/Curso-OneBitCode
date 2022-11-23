@@ -57,9 +57,39 @@
 
 .item5 {
     grid-area: item5;
+    min-width: 350px;
 }
 
 .item6 {
     grid-area: item6;
+    min-width: 250px;
 }
 
+@media (max-width: 780px){
+    .main-content {
+        grid-template-areas: 
+        "item1 item1 item1"
+        "item2 item2 item2"
+        "item3 item3 item3"
+        "item4 item4 item4"
+        "item5 item5 item6";
+    }
+}
+
+@media (max-width: 630px){
+    .main-content {
+        grid-template-areas: 
+        "item1 item1 item1"
+        "item2 item2 item2"
+        "item3 item3 item3"
+        "item4 item4 item4"
+        "item5 item5 item5"
+        "item6 item6 item6";
+    }
+}
+
+@media (max-width: 360px){
+    .item5 {
+        min-width: auto;
+    }
+}
