@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:white;
+}
+
+body {
+    background-image: url(../../img/backgroundLp.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.container1 {
+    background-color: $background-color;
+    width: 450px !important;
+    height: auto;
+}
+
+.topLogo {
+    width: 180px;
+}
+
+.paragraph {
+    margin: 8px 0px;
+}
+
+.btnSend {
+    color: $button-color !important;
+    border: 1px solid $button-color !important;
+
+    &:hover {
+        background-color: $button-color !important;
+        color: #fff !important;
+    }
+}
+
+.footer {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
