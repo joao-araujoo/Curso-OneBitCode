@@ -1,3 +1,5 @@
+@import "../common/common.scss";
+
 .content {
 
     .paragraph {
@@ -22,13 +24,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     @extend .content;
-
-    .nav-item {
-        a {
-            color: #fff;
-            font-weight: 700;
-        }
-    }
 
     .paragraph {
         padding-top: 160px;
