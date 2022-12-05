@@ -1,4 +1,15 @@
-let n1 = parseFloat(prompt('Digite um número:'))
-let n2 = parseFloat(prompt('Digite outro número:'))
+const x = parseFloat(prompt('Informe o primeiro número: '))
+const y = parseFloat(prompt('Informe o segundo número: '))
 
-alert(`${n1 + n2}, ${n1 - n2}, ${n1 * n2}, ${n1 / n2}`)
+const soma = x + y
+const subtração = x - y
+const multiplicação = x * y
+const divisão = x / y
+
+alert(
+    'Resultados:\n' +
+    '\nSoma: ' + soma +
+    '\nSubtração: ' + subtração +
+    '\nMultiplicação: ' + multiplicação +
+    '\nDivisão: ' + divisão
+)
