@@ -23,6 +23,7 @@
     order: 0;
     flex-grow: 0;
     flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .bloco-2 {
@@ -30,6 +31,7 @@
     order: 0;
     flex-grow: 0;
     flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .bloco-3 {
@@ -37,4 +39,5 @@
     order: 0;
     flex-grow: 0;
     flex-shrink: 1;
+    flex-basis: auto;
 }
