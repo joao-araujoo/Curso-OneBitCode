@@ -1,8 +1,7 @@
 .container {
-    height: 80vh;
+    height: 500px;
+    padding: 20px;
     display: flex;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
@@ -20,12 +19,15 @@
 
 .bloco-1 {
     background-color: rgb(117, 172, 235);
+    order: 0;
 }
 
 .bloco-2 {
     background-color: rgb(164, 95, 255);
+    order: 1;
 }
 
 .bloco-3 {
     background-color: rgb(255, 126, 255);
+    order: -1;
 }
