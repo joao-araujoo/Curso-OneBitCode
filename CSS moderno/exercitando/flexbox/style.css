@@ -1,8 +1,9 @@
 .container {
+    /* width: 500px; */
     height: 500px;
     padding: 20px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -21,16 +22,19 @@
     background-color: rgb(117, 172, 235);
     order: 0;
     flex-grow: 0;
+    flex-shrink: 1;
 }
 
 .bloco-2 {
     background-color: rgb(164, 95, 255);
     order: 0;
     flex-grow: 0;
+    flex-shrink: 1;
 }
 
 .bloco-3 {
     background-color: rgb(255, 126, 255);
     order: 0;
     flex-grow: 0;
+    flex-shrink: 1;
 }
