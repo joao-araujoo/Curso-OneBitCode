@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloco {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+}
+
+.bloco-1 {
+    background-color: rgb(117, 172, 235);
+}
+
+.bloco-2 {
+    background-color: rgb(164, 95, 255);
+}
+
+.bloco-3 {
+    background-color: rgb(255, 126, 255);
+}
