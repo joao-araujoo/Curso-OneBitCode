@@ -2,6 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFC107;
 }
 
 body {
@@ -14,7 +29,7 @@ header {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 header .links a {
   margin-right: 30px;
@@ -100,6 +115,9 @@ main {
   }
   .content .text {
     text-align: center;
+  }
+  .content button {
+    margin: 0 auto;
   }
   .food .paragraph {
     max-width: 100%;

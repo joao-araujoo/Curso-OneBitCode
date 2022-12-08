@@ -2,7 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #FFC107;
+}  
 
 body {
     background-color: #d3222a;
@@ -14,7 +29,7 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .links a {
         margin-right: 30px;
@@ -110,7 +125,9 @@ main {
         .text {
             text-align: center;
         }
-        
+        button {
+            margin: 0 auto;
+        }
     }
     .food {
             .paragraph {
