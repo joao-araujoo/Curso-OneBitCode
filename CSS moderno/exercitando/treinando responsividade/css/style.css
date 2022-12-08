@@ -55,4 +55,26 @@ main {
   font-size: 15px;
 }
 
+@media (max-width: 840px) {
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+@media (max-width: 720px) {
+  header {
+    flex-direction: column;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .links a {
+    margin: 0 auto !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
