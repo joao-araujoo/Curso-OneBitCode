@@ -9,3 +9,5 @@ if (idade > 18){
 } else {
     console.log('...')
 }
+
+const resultado = (1 === 1) ? 'Verdadeiro' : 'Falso'
