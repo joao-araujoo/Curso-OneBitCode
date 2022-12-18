@@ -9,9 +9,14 @@ do {
             let end1
             let ofAge = 0
             let underAge = 0
+            let age = 0
 
             do {
-                ages.push(Number(prompt('Insira uma idade:')))
+                age = Number(prompt('Insira uma idade:'))
+                while(age < 0 || age > 120){
+                    age = Number(prompt('Insira uma idade válida para um ser humano!'))
+                }
+                ages.push(age)
                 end1 = confirm('Deseja adicionar outra idade?')
             } while(end1 !== false)
 
