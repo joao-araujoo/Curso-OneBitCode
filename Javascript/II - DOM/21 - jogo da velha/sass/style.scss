@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    margin: 0 auto;
+
+    .box {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+    }
+
+    #box-2 {
+        border-left: 5px solid white;
+        border-right: 5px solid white;
+    }
+
+    #box-5 {
+        border: 5px solid white;
+    }
+
+    #box-4 {
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+
+    #box-6 {
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+    }
+
+    #box-8 {
+        border-left: 5px solid white;
+        border-right: 5px solid white;
+    }
+}
+
