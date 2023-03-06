@@ -1,13 +1,16 @@
 const dayjs = require("dayjs")
 
-let dateOfBirth = '2007-02-19'
+const birthday = (date) => {
+    const birthday = dayjs(date)
+    const today = dayjs()
 
-const getAgeDates = (d) => {
-    const year = dayjs().year()
-    console.log(`Sua idade hoje: ${year - 2007}
-Sua próxima data de aniversário: ${2}
-Quantos dias faltam para o seu aniversário: ${dayjs(d).format('DD/MM/YYYY')}`
-)
+    const ageInYears = today.diff(birthday, 'year')
+    const nextBirthday = birthday.add(ageInYears + 1, 'year')
+    const daysToNextBirthday = nextBirthday.diff(today, 'day')
+
+    console.log(`Idade: ${ageInYears}`)
+    console.log(`Próximo aniversário: ${nextBirthday.format('DD/MM/YYYY')}`)
+    console.log(`Dias até completar ${ageInYears + 1} anos: ${daysToNextBirthday}`)
 }
 
-getAgeDates(dateOfBirth)
+birthday('2007-02-19')       
