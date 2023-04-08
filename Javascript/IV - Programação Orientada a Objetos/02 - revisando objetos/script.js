@@ -27,14 +27,12 @@ function Book(title, pages, tags, author){
         // salva no banco de dados
     }
 }
+
 const author = { name: 'Cristopher Paolini'}
 const tags = ['fantasy', 'adventure', 'medieval']
 
-
 const eragon = new Book('Eragon', 468, tags, author)
-
-console.log(eragon)
+console.log("🚀 ~ file: script.js:35 ~ eragon:", eragon)
 
 const eldest = new Book('Eldest', 644, tags, author)
-
-console.log(eldest)
+console.log("🚀 ~ file: script.js:38 ~ eldest:", eldest)
