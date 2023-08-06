@@ -7,6 +7,7 @@ module.exports = class Account {
 
     constructor(accountOwner){
         this.accountOwner = accountOwner
+        this.#balance = 0
         this.deposits = []
         this.loans = []
         this.transfers = []

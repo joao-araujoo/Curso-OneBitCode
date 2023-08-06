@@ -1,7 +1,7 @@
 const Installment = require("./Installment")
 
 module.exports = class Loan {
-    static #fees // juros
+    static #fees = 1.05 // juros
 
     // installments = parcelas
     constructor(value, date, numberOfInstallments){
@@ -11,19 +11,19 @@ module.exports = class Loan {
     }
 
     static get fees(){
-        return this.#fees
+        return Loan.#fees
     }
 
     static set newFees(value){
         if(typeof value === 'number'){
-            this.#fees = value
+            Loan.#fees = 1 + (value / 100)
         } else {
             console.log('O valor da taxa precisa ser um número!')
         }
     }
 
     calculateInstallments(value, numberOfInstallments){
-        const installmentValue = value / numberOfInstallments
+        const installmentValue = value * Loan.#fees / numberOfInstallments
         const list = []
         
         for(let i = 1; i <= numberOfInstallments; i++){
