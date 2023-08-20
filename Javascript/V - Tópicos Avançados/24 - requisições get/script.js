@@ -18,7 +18,17 @@ async function getCountries(){
     const response = await fetch('https://restcountries.com/v3.1/all')
     const countries = await response.json()
 
-    countries.forEach(createCountryCard)
+    return countries
 }
 
-getCountries()
+
+async function searchCountries(){
+    const inputEntry = document.getElementById('searchInput').value.toLowerCase()
+    const countriesDiv = document.getElementById('countries')
+    countriesDiv.innerHTML = ''
+    
+    const countries = await getCountries()
+    const foundCountries = countries.filter(country => country.name.common.toLowerCase().includes(inputEntry))
+
+    foundCountries.forEach(createCountryCard)
+}
