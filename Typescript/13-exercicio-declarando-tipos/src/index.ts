@@ -16,7 +16,7 @@ const addSpaceship = () => {
     )
 }
 
-const addCrew = spaceship => {
+const addCrew = (spaceship: { crewLimit: number, crew: string[] }) => {
     if(spaceship.crew.length >= spaceship.crewLimit){
         alert('Tripulação excedida!')
         return
@@ -26,7 +26,7 @@ const addCrew = spaceship => {
     spaceship.crew.push(newCrew)
 }
 
-const sendSpaceshipInMission = spaceship => {
+const sendSpaceshipInMission = (spaceship: { name: string, pilot: string, crewLimit: number, crew: string[], inMission: boolean }) => {
     if(spaceship.inMission){
         alert('Espaçonave já está em missão!')
         return
