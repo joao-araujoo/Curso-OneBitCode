@@ -13,3 +13,13 @@ var MilkWayPlanet = /** @class */ (function () {
     };
     return MilkWayPlanet;
 }());
+var Car = /** @class */ (function () {
+    function Car() {
+    }
+    return Car;
+}());
+var Motorcycle = /** @class */ (function () {
+    function Motorcycle() {
+    }
+    return Motorcycle;
+}());

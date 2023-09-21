@@ -44,3 +44,33 @@ class MilkWayPlanet implements Planet {
 interface Planet {
     satellites?: string[]
 }
+
+// exercitando
+
+interface Vehicle {
+    name: string
+    year: number
+    type: string
+    model: string
+    passengers?: string[]
+}
+
+class Car implements Vehicle {
+    name: string
+    year: number
+    type: string
+    model: string
+    qtyOfDoors: number
+}
+
+class Motorcycle implements Vehicle {
+    name: string
+    year: number
+    type: string
+    model: string
+    category: string
+}
+
+interface Vehicle {
+    size?: number
+}
