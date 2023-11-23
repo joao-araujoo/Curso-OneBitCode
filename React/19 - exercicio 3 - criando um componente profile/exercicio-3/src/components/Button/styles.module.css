@@ -1,0 +1,10 @@
+.button {
+  padding: 1rem 3rem;
+  border-radius: .7rem;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(61deg, rgba(15,88,156,1) 6%, rgba(44,105,159,1) 21%, rgba(70,125,174,1) 46%, rgba(162,196,227,1) 82%);
+  cursor: pointer;
+}
