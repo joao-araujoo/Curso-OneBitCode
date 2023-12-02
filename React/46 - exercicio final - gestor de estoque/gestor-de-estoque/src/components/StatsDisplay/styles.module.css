@@ -1,0 +1,19 @@
+.wrapper {
+  width: 25%;
+  height: 15rem;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px 1px rgba(26, 26, 26, 1);
+  -moz-box-shadow: 1px 1px 10px 1px rgba(26, 26, 26, 1);
+  box-shadow: 1px 1px 10px 1px rgba(26, 26, 26, 1);
+}
+
+.wrapper p {
+  margin: 1rem 2rem;
+}
+
+.wrapper h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 400;
+}
