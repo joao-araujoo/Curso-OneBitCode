@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import StockItem, { CATEGORIES } from "../models/StockItem";
 import useStock from "../hooks/useStock";
@@ -17,7 +17,8 @@ export default function ItemForm({ itemToUpdate }) {
   };
 
   const [item, setItem] = useState(itemToUpdate ? itemToUpdate : defaultItem);
-  const { addItem } = useStock();
+  const { addItem, updateItem } = useStock();
+  const inputRef = useRef(null);
 
   const handleChange = (ev) => {
     setItem(currentState => {
@@ -32,6 +33,12 @@ export default function ItemForm({ itemToUpdate }) {
     ev.preventDefault()
 
     try {
+      if (itemToUpdate) {
+        updateItem(itemToUpdate.id, item)
+        alert("Item atualizado com sucesso!")
+        return
+      }
+
       const validItem = new StockItem(item)
       addItem(validItem)
 
@@ -39,6 +46,8 @@ export default function ItemForm({ itemToUpdate }) {
       setItem(defaultItem)
     } catch (error) {
       console.error(error)
+    } finally {
+      inputRef.current.focus()
     }
   }
 
@@ -52,6 +61,7 @@ export default function ItemForm({ itemToUpdate }) {
             name="name"
             id="name"
             required
+            ref={inputRef}
             value={item.name}
             onChange={handleChange}
           />
