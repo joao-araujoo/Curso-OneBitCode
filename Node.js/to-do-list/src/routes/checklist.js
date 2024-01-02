@@ -12,4 +12,10 @@ router.post('/', (req, res) => {
   res.status(200).send(req.body);
 });
 
+// tudo que vem antes do ":" é identificado como parâmetro, que pode ser acessado pelo objetoç "params" da requisição
+router.get('/:id', (req, res) => {
+  console.log(req.params.id)
+  res.send(`ID: ${req.params.id}`);
+});
+
 module.exports = router;
