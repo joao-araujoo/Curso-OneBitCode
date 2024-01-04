@@ -1,5 +1,6 @@
 const express = require('express');
 const checkListRouter = require('./src/routes/checklist');
+require('./config/database');
 const PORT = 3000;
 
 const app = express();
