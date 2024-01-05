@@ -1,10 +1,13 @@
-const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
+const mongoose = require('mongoose')
 
-mongoose
-  .connect("mongodb://localhost/todo-list", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("Conectado ao MongoDB"))
-  .catch((error) => console.error(error));
+const connectToDatabase = async () => {
+    try {
+        await mongoose.connect(`mongodb+srv://joaoaraujoo2007:eQxHKXp5UCA1TBcW@cluster0.p3zrdxb.mongodb.net/?retryWrites=true&w=majority`)
+
+        console.log('Conexão ao banco de dados realizada com sucesso!')
+    } catch (error) {
+        throw new Error(`Ocorreu um erro ao se conectar ao banco de dados: ${error.message}`)
+    }
+}
+
+module.exports = connectToDatabase
