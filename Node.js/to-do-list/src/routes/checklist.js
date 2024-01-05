@@ -3,9 +3,13 @@ const Checklist = require('../models/checklist');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  console.log('Checklists');
-  res.send();
+router.get('/', async (req, res) => {
+  try {
+    let checklists = await Checklist.find({});
+    res.status(200).json(checklists);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 router.post('/', async (req, res) => {
@@ -15,14 +19,18 @@ router.post('/', async (req, res) => {
     let checklist = await Checklist.create({ name })
     res.status(200).json(checklist);
   } catch (error) {
-    res.status(422).json({ error });
+    res.status(422).json(error);
   }
 });
 
 // tudo que vem antes do ":" é identificado como parâmetro, que pode ser acessado pelo objetoç "params" da requisição
-router.get('/:id', (req, res) => {
-  console.log(req.params.id)
-  res.send(`ID: ${req.params.id}`);
+router.get('/:id', async (req, res) => {
+  try {
+    let checklist = await Checklist.findById(req.params.id);
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(422).json(error);
+  }
 });
 
 router.put('/:id', (req, res) => {
