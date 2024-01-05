@@ -33,14 +33,24 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
-  console.log(req.params.id)
-  res.send(`PUT ID: ${req.params.id}`);
+router.put('/:id', async (req, res) => {
+  try {
+    let { name } = req.body
+
+    let checklist = await Checklist.findByIdAndUpdate(req.params.id, { name }, { new: true });
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(422).json(error);
+  }
 });
 
-router.delete('/:id', (req, res) => {
-  console.log(req.params.id)
-  res.send(`DELETE ID: ${req.params.id}`);
+router.delete('/:id', async (req, res) => {
+  try {
+    let checklist = await Checklist.findByIdAndDelete(req.params.id);
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(422).json(error);
+  }
 });
 
 module.exports = router;
