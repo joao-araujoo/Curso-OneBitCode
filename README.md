@@ -46,6 +46,6 @@
   </div>
   <div>
   
-  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+  <img width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />![icons8-selecionado](https://user-images.githubusercontent.com/113838517/207184745-e96f5a0e-878d-4a1c-85d8-8b0b71519b89.svg)
   
   </div>
