@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ededed;
+}
+
+main {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.title, .subtitle {
+  font-family: var(--font-playfair-display);
+  font-weight: 400;
+}
+
+.paragraph {
+  font-family: var(--font-inter);
+  font-size: 0.8rem;
+  margin: 15px 0;
+  text-align: justify;
+}
