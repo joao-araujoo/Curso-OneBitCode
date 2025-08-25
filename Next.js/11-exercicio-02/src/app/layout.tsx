@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = localFont({
   src: "./fonts/Inter.ttf",
@@ -26,8 +27,20 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playfairDisplay.variable} ${inter.variable}`}>
         <header>
-          <div className="site-logo">Universo em Foco</div>
-          <p>Explore o incrível mundo da astronomia e descubra segredos do cosmos através de artigos, imagens e muito mais!</p>
+          <div>
+            <div className="site-logo">Universo em Foco</div>
+            <p>
+              Explore o incrível mundo da astronomia e descubra segredos do
+              cosmos através de artigos, imagens e muito mais!
+            </p>
+          </div>
+          <nav>
+            <Link href="/">Início</Link>
+            {" | "}
+            <Link href="/blog">Blog</Link>
+            {" | "}
+            <Link href="/shop">Loja</Link>
+          </nav>
         </header>
         {children}
       </body>

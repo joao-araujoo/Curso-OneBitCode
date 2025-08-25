@@ -1,28 +1,45 @@
-import { ReactNode } from "react";
+"use client";
+
+import { ReactNode, useEffect, useState } from "react";
 import styles from "./layout.module.css"
+import Link from "next/link";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    console.log("Render");
+  }, []);
+
   return (
     <div className={styles.blogLayout}>
       <aside>
+        <h2>Counter: {counter}</h2>
+        <button
+          onClick={() => {
+            setCounter((currentValue) => currentValue + 1);
+          }}
+        >
+          Incrementar
+        </button>
         <div>
           <h2>Categorias</h2>
           <ul className="cards">
             <li className="card">
-              <a href="#">Planetas</a>
+              <Link href="/blog/categorias/planetas">Planetas</Link>
             </li>
             <li className="card">
-              <a href="#">Estrelas</a>
+              <Link href="/blog/categorias/estrelas">Estrelas</Link>
             </li>
             <li className="card">
-              <a href="#">Galáxias</a>
+              <Link href="/blog/categorias/galaxias">Galáxias</Link>
             </li>
             <li className="card">
-              <a href="#">Cosmologia</a>
+              <Link href="/blog/categorias/cosmologia">Cosmologia</Link>
             </li>
           </ul>
         </div>
@@ -45,9 +62,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </aside>
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
-  )
+  );
 }
